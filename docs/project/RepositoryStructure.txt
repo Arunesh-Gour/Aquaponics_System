@@ -1,0 +1,71 @@
+.Aquaphonics_System
+|--- _config/
+|    |___ .vimrc
+|
+|--- _docs/
+|    |--- _hardware/
+|    |    |--- _hardware/
+|    |    |    |___ Hardware_0000.rst
+|    |    |
+|    |    |___ hardwares.rst
+|    |
+|    |--- _project/
+|    |    |--- _reports/
+|    |    |    |--- _issues_risks/
+|    |    |    |    |--- _issue/
+|    |    |    |    |    |___ issue_0000.rst
+|    |    |    |    |
+|    |    |    |    |--- _risk/
+|    |    |    |    |    |___ risk_0000.rst
+|    |    |    |    |
+|    |    |    |    |--- issues.rst
+|    |    |    |    |___ risks.rst
+|    |    |    |
+|    |    |    |--- IndividualReport_0000.rst
+|    |    |    |--- IndividualWorkTimeline.rst
+|    |    |    |--- ProjectWorkTimeline.rst
+|    |    |    |___ StatusReport_0000.rst
+|    |    |
+|    |    |--- ProjectPlan.rst
+|    |    |___ RepositoryStructure.txt           # this file
+|    |
+|    |--- _software/
+|    |
+|    |--- _standards/
+|    |    |--- _coding/
+|    |    |    |--- CCppJavaJSCoding.txt
+|    |    |    |--- CSSCoding.txt
+|    |    |    |--- PythonCoding.txt
+|    |    |    |___ XmlHtmlCoding.txt
+|    |    |
+|    |    |--- _hardware/
+|    |    |    |--- hardware_0000.rst
+|    |    |    |___ hardwares.rst
+|    |    |
+|    |    |--- _others/
+|    |    |    |--- FileStructure.txt
+|    |    |    |--- NormalTextFile.txt
+|    |    |    |___ RepositoryStructure.txt
+|    |    |
+|    |    |--- _report/
+|    |    |    |--- ClosureReport.rst
+|    |    |    |--- IndividualReport_0000.rst
+|    |    |    |--- IndividualWorkTimeline.rst
+|    |    |    |--- issue_0000.rst
+|    |    |    |--- issues.rst
+|    |    |    |--- ProjectWorkTimeline.rst
+|    |    |    |--- risk_0000.rst
+|    |    |    |--- risks.rst
+|    |    |    |___ StatusReport_0000.rst
+|    |    |
+|    |    |--- _software/
+|    |    |    |___ SRS.rst
+|    |    |
+|    |    |___ ProjectPlan.rst
+|    |
+|    |--- Contributing.rst
+|    |___ GitHubUsage.rst
+|
+|--- _src/
+|
+|___ README.rst

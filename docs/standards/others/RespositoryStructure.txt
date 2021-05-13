@@ -1,0 +1,5 @@
+Repository : File(s) / folder(s) organized in a structure.
+
+Contains   : Filestructure outlining be basic directory(ies) and important
+                file(s).
+             May contain all file(s) present in the repository, if possible.

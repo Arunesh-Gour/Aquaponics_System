@@ -1,0 +1,51 @@
+===========
+Risk (0000)
+===========
+
+.. NOTE: This is individual risk's detailed report.
+         Risk id is refelected in report's name, replacing 0's with id.
+
+:ID: id.
+:Status: status.
+:Rank: [severity * likelihood]
+:Severity: severity.
+:Likelihood: likelihood.
+:Assigned to: assigned to.
+
+Description
+===========
+   Description.
+
+Impact
+======
+   Budget
+   ------
+      Budget.
+   
+   Timeline
+   --------
+      Timeline.
+   
+   Quality
+   -------
+      Quality.
+   
+   Performance
+   -----------
+      Performance.
+
+Prevention
+==========
+   Prevention.
+
+Contigency
+==========
+   Contigency.
+
+Actions
+=======
+   Actions.
+
+Remarks
+=======
+   Remarks.

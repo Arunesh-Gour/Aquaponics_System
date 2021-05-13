@@ -1,0 +1,24 @@
+Indentation       : Use 3 spaces [ ] to indent a block / region, and do not use
+                       tabs. (every editor has their separate defination of
+                       tabs)
+                    For all sub-blocks / sub-regions also, use 3 spaces [ ].
+
+Tags / attributes : Write html / xml tags in all lower-case, if possible.
+                    Write the attributes in all lower-case as well.
+                    For some special tags like '<!DOCTYPE>', write them in all
+                       upper-case.
+
+Empty lines       : Separate two block by only a single line, with properly
+                       indented spaces only.
+                    Do not use only empty lines without indentation, if the
+                       blocks above and below the line is indented.
+
+Comments          : Use comments to put notes in a clean way in the program.
+                    Use proper indentation while starting comment with apt
+                       start keyword [<!--], followed by a single space [ ] as
+                       [<!-- ].
+                    To indent comments in-line, use proper indentations with
+                       sets of three spaces [   ] only, not tabs.
+
+Additional notes  : Use built-in functions and methods wherever and whenever
+                          possible, rather than defining your own.

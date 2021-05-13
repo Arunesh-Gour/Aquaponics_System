@@ -1,0 +1,48 @@
+===========
+Risk (0000)
+===========
+
+:ID: id.
+:Status: status.
+:Rank: [severity * likelihood]
+:Severity: severity.
+:Likelihood: likelihood.
+:Assigned to: assigned to.
+
+Description
+===========
+   Description.
+
+Impact
+======
+   Budget
+   ------
+      Budget.
+   
+   Timeline
+   --------
+      Timeline.
+   
+   Quality
+   -------
+      Quality.
+   
+   Performance
+   -----------
+      Performance.
+
+Prevention
+==========
+   Prevention.
+
+Contigency
+==========
+   Contigency.
+
+Actions
+=======
+   Actions.
+
+Remarks
+=======
+   Remarks.

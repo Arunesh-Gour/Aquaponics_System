@@ -1,0 +1,38 @@
+Headings     : Must start with a capital letter.
+               All proceeding letters must be in lower case, except if they are
+                  short forms or acronyms, etc only if they make sense.
+               Must be followed by at-least one space and a colon [ :].
+               The spaces entered must match to the largest heading in the file
+                   or current region in order to indent properly.
+               Leave only one single line between two different headings.
+
+Sub-headings : Follow all rules of headings.
+               Indent according to the colon [:] of heading with single space
+                  [ ] after aligning with the colon [:].
+
+Points       : If the point does not belong to any heading, then give it some
+                  other heading as all points must belong to a heading or
+                  sub-heading.
+               If it belongs to a region or heading, use indentation as per the
+                  region or heading respectively.
+               Write lines to a maximum of 80 characters from the very first
+                  position of the writing space in the entire document.
+               If point does not fit in the given line, break it by writing the
+                  breaking word starting from the next line following proper
+                  indentation, affixing three spaces [   ] (no tabs) for
+                  subsequent lines of a point after indenting.
+               Do not leave empty lines between two points belonging to same
+                  region or heading.
+
+Symbols      : Write special characters or symbols only in square brackets [[]]
+                  without any escaping, i.e. 'as is'.
+
+Multi-values : For multiple values, use forward-slash keyword [/] with single
+                  space prefixed and suffixed to it as [ / ].
+
+Emphasis     : To emphasize or quote an 'as is' things, use single quotes ['].
+
+Special keys : To write special keys or keyboard keys, write them in square
+                  brackets [[]] with key name in all upper-case withing square
+                  brackets such as '[DEL]' or '[DELETE]' which means delete key
+                  of keyboard.

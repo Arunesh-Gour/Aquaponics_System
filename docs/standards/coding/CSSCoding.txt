@@ -1,0 +1,34 @@
+Indentation        : Use 3 spaces [ ] to indent a block / region, and do not
+                        use tabs. (every editor has their separate defination
+                        of tabs)
+                     For all sub-blocks / sub-regions also, use 3 spaces [ ].
+
+Selectors          : For filtered selectors, separate each sub-selectors by a
+                        single space [ ] only.
+                     For multiple selectors, separate each selectors by a comma
+                        [,] followed by a space [ ] as [, ].
+
+Blocks             : To start block by curly parenthesis [{}], put curly
+                        parenthesis's start [{] on the same line as selectors
+                        with a single space [ ] between them as [ {].
+                     To end block by curly parenthesis [{}], put the curly
+                        parenthesis's end [}] on a separate line with proper
+                        indentation with parent block.
+
+Empty lines        : Separate two block by only a single line, with properly
+                        indented spaces only.
+                     Do not use only empty lines without indentation, if the
+                        blocks above and below the line is indented.
+
+Comments           : Use comments to put notes in a clean way in the program.
+                     Use proper indentation while starting comment with apt
+                        keywords, followed by a single space [ ].
+                     To indent comments in-line, use proper indentations with
+                        sets of three spaces [   ] only, not tabs.
+
+Additional details : Use short / efficient / apt notations wherever / whenever
+                          possible.
+                     Use semi-colon [;] at end of every property-value pairs,
+                          without any space [ ] between the value and
+                          semi-colon [;].
+                     Keep values in single quotes ['] wherever available.

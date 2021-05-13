@@ -1,0 +1,101 @@
+Python version       : 3.x
+
+Indentation          : Use 3 spaces [ ] to indent a block / region, and do not
+                          use tabs. (every editor has their separate defination
+                          of tabs)
+                       For all sub-blocks / sub-regions also, use 3 spaces [ ].
+
+Functions            : In function declaration, the function name and
+                          parenthesis [()] must be separated by only one space
+                          [ ].
+                       In function declaration and function calling, the
+                          arguments must be separated by a comma [,] with space
+                          [ ] as  [, ].
+                       In function declaration, for default arguments, separate
+                          the argument name and default value with an equal sign
+                          [=] with spaces preceeding and succeeding the sign as
+                          [ = ].
+                       In function declaration, to denote absense of arguments
+                          use empty parenthesis [()] without any spaces in
+                          between.
+                       During the function declaration, the colon [:] must
+                          immediately follow parenthesis [()] as [():].
+                       While calling functions, the parenthesis [()] must
+                          immediately follow after function name.
+                       Name the functions as per their function, with
+                          camel-casing and first letter being upper case.
+
+Return values        : If function returns a single value, simply return it as
+                          is.
+                       If function returns multiple values, put all values in
+                          parenthesis [()], with a single space [ ] between the
+                          'return' keyword and parenthesis [()].
+                       If function returns multiple values, all return values
+                          must be separated by a comma [,] with single space [ ]
+                          as [, ], in the parenthesis [()].
+
+List / array / dict  : To denote empty list / array / dict, use empty
+                          parenthesis as per defination.
+                       To separate multiple values, separate them using a comma
+                          [,] with single space [ ] as [, ].
+                       For last value, put an extra comma [,] only at the end of
+                          list / array / dict.
+
+Variable naming      : All variables must be named as per their role.
+                       Do not use short forms for the variables, use full names.
+                       All non-constant variables must start with lower-case
+                          letter and should be written in all lower-case.
+                       However, camel-casing can be used in naming varibles only
+                          if it is required and makes sense, with the first
+                          letter of variable being lower-cased.
+                       All constant variables must be named in all upper-case.
+                       In case of same name being fit for multiple names, name
+                          all such variables by using an under-score [_]
+                          between the variable name and any suitable identifier.
+                       Do not use under-scores [_] in the start of variable
+                          name unless the variable is private or protected.
+
+Empty lines          : Separate two block by only a single line, with properly
+                          indented spaces only.
+                       Do not use only empty lines without indentation, if the
+                          blocks above and below the line is indented.
+
+Conditionals / loops : Use parenthesis [()] to write conditions for the
+                          conditionals / loops.
+                       A single space [ ] must be between the keyword and
+                          parenthesis [()].
+                       Colon [:] must immediately follow the parenthesis [()].
+                       Use indented lines to separate the conditionals with
+                          other blocks or regions.
+                       Separate multiple conditions with only one space [ ]
+                          and with appropriate use of parenthesis [()] and
+                          keywords.
+
+Classes              : All class names must begin with an upper-cased letter
+                          with other letters being lower-cased.
+                       However camel-casing is allowed in naming.
+                       In case of inheritance, parenthesis [()] must be
+                          separated from the class name using only one space
+                          [ ].
+                       If inheritance is not used, do not put empty parenthesis
+                          [()].
+                       The colon [:] must immediately follow the class name
+                          (in case of no inheritance) or parenthesis [()]. (in
+                          case of inheritance)
+                       In case of multiple inheritance, separate the base
+                          classes with a comma [,] followed with a single space
+                          [ ] as [, ].
+                       Use appropriate indentations.
+
+Comments             : Use comments to put notes in a clean way in the program.
+                       Use proper indentation while starting comment with hash
+                          keyword [#], followed by a single space [ ] as [# ].
+                       To indent comments in-line, use proper indentations with
+                          sets of three spaces [   ] only, not tabs.
+                       Try to put notes for most variable you use in a program.
+                       Always put a commented note for the function with
+                          function name and description, argument name and
+                          it's short one lined description.
+
+Additional notes     : Use built-in functions and methods wherever and whenever
+                          possible, rather than defining your own.

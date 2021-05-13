@@ -1,0 +1,48 @@
+Legends            : [.]   : Root directory.
+                             It must be followed by name of root directory.
+                     [|]   : Continuation of file(s) in a directory.
+                     [---] : File(s) or directory(ies) in-between the current
+                                directory.
+                     [___] : Last file or directory in current directory.
+                     [_]   : Starting letter for directory(ies).
+                     [/]   : Ending letter for directory(ies).
+
+Additional details : Branching always starts from first letter of directory.
+                        (including [_] mark)
+                     Directory(ies) must be written first, followed by file(s)
+                        in a directory.
+                     An empty line must be inserted with appropriate formatting
+                        between sibling file and directory(ies).
+                     Use "   # this file" at end of file name if that file
+                        contains the particular file structure. (used in file)
+                     For names of file(s) or directory(ies) that contain
+                        special symbols or spaces, escape them with [\] keyword
+                        or write entire name of file or directory within single
+                        quotes ['], without including extension in quotes.
+                        Write extensions separately.
+                     Escape keyword [\] escapes only one special character
+                        following the keyword. All other following keywords are
+                        are treated as normal.
+                     Follow file or directory naming as per UNIX OS.
+
+Usage (example)    : If the file structure (as given below) is written in a
+                        file File_1_2_2.txt of some project "Project_1", then
+                        it will be drawn as given below.
+                     .Project_1
+                     |--- _Directory_1/
+                     |    |--- _Directory_1_1/
+                     |    |    |___ File_1_1_1_1.txt
+                     |    |
+                     |    |--- _Directory_1_2/
+                     |    |    |--- File_1_2_1.txt
+                     |    |    |___ File_1_2_2.txt   # this file
+                     |    |
+                     |    |___ File_1_1.txt
+                     |
+                     |___ _Directory_2/
+                          |--- File_2_1.txt
+                          |--- 'File 2 2'.txt
+                          |--- File\ 2\ 3.txt
+                          |--- File\@\/2\\\ 4.txt
+                          |--- 'File@/2\ 5'.txt
+                          |___ File_2_6.txt
