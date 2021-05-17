@@ -63,6 +63,13 @@ Database
 .. Database versions and usages with download links.
    Also include DB Schema, relations, etc.
 
+Credits
+=======
+*  ``src/AquaponicsSystem/EmulatedHardware/IoTStubEssentials/`` taken from:
+   :User: `CXINFINITE <https://github.com/CXINFINITE>`_.
+   :Repository: `IoTStubEssentials
+                <https://github.com/CXINFINITE/IoTStubEssentials>`_.
+
 Licensing
 =========
 .. State license and link to text version.
