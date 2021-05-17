@@ -1,7 +1,7 @@
 from ..IoTStubEssentials import (IoTDevice, Signal)
 
-if ("WaterHeaterIoT" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
-   IoTDevice.IoTDevice.deviceTypes[0]["WaterHeaterIoT"] = [
+if ("WaterHeater" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
+   IoTDevice.IoTDevice.deviceTypes[0]["WaterHeater"] = [
       {
          # "attribute_name" : default_value_in_apt_format,
          "power" : False,
@@ -9,9 +9,9 @@ if ("WaterHeaterIoT" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
       0, #IoTDevice manages this automatically.
    ]
 
-class WaterHeaterIoT (IoTDevice.IoTDevice):
+class WaterHeater (IoTDevice.IoTDevice):
    def __init__ (self, deviceName=None):
-      super().__init__(deviceType="WaterHeaterIoT", deviceName=deviceName)
+      super().__init__(deviceType="WaterHeater", deviceName=deviceName)
       
       Signal.Signal.register(self.serial, self.read(key="?"))
    
