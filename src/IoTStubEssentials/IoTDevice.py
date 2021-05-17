@@ -1,5 +1,3 @@
-import re
-
 class IoTDevice:
    """Base class for IoT device stubs.
    
@@ -38,11 +36,20 @@ class IoTDevice:
       Writes values to particular attribute (key).
    """
    
-   availableID = 0
-   deviceTypes = {
-      # Type : [{"attribute" : values (default None)}, 0 (count)],
-      # "House": [{"time" : 1, "apps" : 2,}, 0],
-   }
+   unusedMainIDs = []
+   unusedSubIDs = []
+   deviceTypes = [
+      {
+         # Type : [
+         #           {
+         #              "attribute" : values (default None),
+         #           },
+         #           0 (count),
+         #        ],
+         # "House": [{"time" : 1, "apps" : 2,}, 0],
+      },
+      0, # count
+   ]
    devices = {
       # Name (unique) : [type, object],
       # "Kryptonite" : ["House", None,],
@@ -57,18 +64,12 @@ class IoTDevice:
       ---------
       deviceType : str
          Type of device; from devices' list.
-      deviceName : str
-         Unique name for device (optional).
+      deviceName : NoneType, str, optional
+         Unique name for device.
       """
       
       if (type(deviceType).__name__ == 'str'):
-         if (deviceType in IoTDevice.deviceTypes.keys()):
-            self.deviceType = deviceType
-            self.deviceAttributes = (\
-               # "Attribute" : value (default),
-               IoTDevice.deviceTypes[deviceType][0]\
-            ).copy()
-         else:
+         if (deviceType not in (IoTDevice.deviceTypes[0]).keys()):
             raise ValueError("unrecognized deviceType '{0}'".format(\
                   deviceType,
                )\
@@ -76,32 +77,70 @@ class IoTDevice:
       else:
          raise TypeError("deviceType requires 'str' only")
       
+      if (deviceName == None or type(deviceName).__name__ == 'str'):
+         if (deviceName != None):
+            if (deviceName == '' or len(deviceName) < 2):
+               raise TypeError("deviceName requires 'str' of length >= 2")
+            
+            if (deviceName in IoTDevice.devices.keys()):
+               raise ValueError("deviceName '{0}' already in use".format(
+                     deviceName,
+                  )\
+               )
+      else:
+         raise TypeError("deviceName requires 'NoneType' or 'str' only")
+      
+      self.deviceType = deviceType
+      self.deviceAttributes = (IoTDevice.deviceTypes[0][deviceType][0]).copy()
+      
+      if (len(IoTDevice.unusedSubIDs) < 1):
+         subID = IoTDevice.deviceTypes[0][deviceType][1]
+      else:
+         subID = IoTDevice.unusedSubIDs.pop()
+      
+      if (len(IoTDevice.unusedMainIDs) < 1):
+         mainID = IoTDevice.deviceTypes[1]
+      else:
+         mainID = IoTDevice.unusedMainIDs.pop()
+      
       if (deviceName == None):
-         self.deviceName = "{0}{1:03}_{2:03}".format(\
-            self.deviceType,
-            IoTDevice.deviceTypes[self.deviceType][1],
-            IoTDevice.availableID,
-         )
-      elif (type(deviceName).__name__ == 'str' and deviceName != ''):
-         if (deviceName not in IoTDevice.devices.keys()):
-            self.deviceName = deviceName
-         else:
-            raise ValueError(\
-               "deviceName '{0}' already assigned to another device".format(
-                  deviceName,
-               )\
+         self.deviceName = "{0}{1:03}_{2:03}".format(
+               self.deviceType, subID, mainID,
             )
       else:
-         raise TypeError("deviceName requires 'str' only")
+         self.deviceName = deviceName
       
-      self.serial = "{0:03}.{1:03}".format(\
-         IoTDevice.deviceTypes[self.deviceType][1],
-         IoTDevice.availableID,
-      )
+      self.serial = "{0:03}.{1:03}".format(subID, mainID)
       
-      IoTDevice.availableID += 1
-      IoTDevice.deviceTypes[self.deviceType][1] += 1
-      IoTDevice.devices[self.deviceName] = [self.deviceType, self,]
+      self._subID = subID
+      self._mainID = mainID
+      
+      IoTDevice.deviceTypes[0][deviceType][1] += 1
+      IoTDevice.deviceTypes[1] += 1
+      
+      IoTDevice.devices[self.deviceName] = [self.deviceType, self]
+   
+   def delete (self):
+      """Deletes device.
+      
+      Deletes and unregisters device from device list.
+      """
+      
+      self.__del__()
+   
+   def __del__ (self):
+      """Deletes device.
+      
+      Deletes and unregisters device from device list.
+      """
+      
+      IoTDevice.unusedMainIDs.append(self._mainID)
+      IoTDevice.unusedSubIDs.append(self._subID)
+      
+      IoTDevice.deviceTypes[1] -= 1
+      IoTDevice.deviceTypes[0][self.deviceType][1] -= 1
+      
+      IoTDevice.devices.pop(self.deviceName)
    
    def read(self, key):
       """Returns reading for specified attribute (key) in device.
