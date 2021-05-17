@@ -1,5 +1,5 @@
 from ..IoTStubEssentials import (IoTDevice, Signal)
-# Above line will generate error as IoTStubEssentials in in current
+# Above line will generate error as IoTStubEssentials is in current
 # directory, not in parent. This it not changed to show how you need
 # to write in IoTStub devices / files.
 
