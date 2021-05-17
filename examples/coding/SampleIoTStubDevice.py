@@ -10,7 +10,7 @@ if ("SampleDeviceName" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
          "SomeKey" : 0,
          "SomeKey2" : True,
       },
-      0, #IoTDevice manages this automatically.
+      0, # IoTDevice manages this automatically.
    ]
 
 class SampleDeviceName (IoTDevice.IoTDevice):

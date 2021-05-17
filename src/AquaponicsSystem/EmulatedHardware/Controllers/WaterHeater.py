@@ -6,7 +6,7 @@ if ("WaterHeater" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
          # "attribute_name" : default_value_in_apt_format,
          "power" : False,
       },
-      0, #IoTDevice manages this automatically.
+      0, # IoTDevice manages this automatically.
    ]
 
 class WaterHeater (IoTDevice.IoTDevice):
