@@ -65,7 +65,7 @@ Database
 
 Credits
 =======
-*  ``src/AquaponicsSystem/EmulatedHardware/IoTStubEssentials/`` taken from:
+*  :File: ``src/AquaponicsSystem/EmulatedHardware/IoTStubEssentials/``
    :User: `CXINFINITE <https://github.com/CXINFINITE>`_.
    :Repository: `IoTStubEssentials
                 <https://github.com/CXINFINITE/IoTStubEssentials>`_.
