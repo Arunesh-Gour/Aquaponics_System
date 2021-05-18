@@ -169,11 +169,11 @@ class Signal:
          for attributeSignalID in attributeSignalIDs[1:]:
             linkedSignalIDs.append(attributeSignalID)
       
-      (Signal.signalObjects[0]).pop(serial)
-      Signal.signalObjects[1] -= 1
-      
       if (len(linkedSignalIDs) > 0):
          Signal._signal(linkedSignalIDs[:], trigger="ondelete")
+      
+      (Signal.signalObjects[0]).pop(serial)
+      Signal.signalObjects[1] -= 1
    
    def updateregistration (serial, attributes, mode="add", new_attributes=None):
       """Updates attributes of registered objects.

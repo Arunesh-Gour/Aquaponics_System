@@ -126,14 +126,6 @@ class IoTDevice:
       Deletes and unregisters device from device list.
       """
       
-      self.__del__()
-   
-   def __del__ (self):
-      """Deletes device.
-      
-      Deletes and unregisters device from device list.
-      """
-      
       IoTDevice.unusedMainIDs.append(self._mainID)
       IoTDevice.unusedSubIDs.append(self._subID)
       
@@ -141,6 +133,15 @@ class IoTDevice:
       IoTDevice.deviceTypes[0][self.deviceType][1] -= 1
       
       IoTDevice.devices.pop(self.deviceName)
+      
+      self.__del__()
+   
+   def __del__ (self):
+      """Deletes device.
+      
+      Deletes and unregisters device from device list.
+      """
+      pass
    
    def read(self, key):
       """Returns reading for specified attribute (key) in device.
