@@ -35,7 +35,7 @@ Developing instructions
 *  Additional files may be created directly inside an *app* directory, given
    that there is a need and separates the code based on purpose not
    functionality.
-*  If creating a directory, include an ``__init.py`` inside one, even if it is
+*  If creating a directory, include an ``__init__.py`` inside one, even if it is
    empty. This makes the directory look like a *module* to python making it
    easily accessible.
 *  Django follows **M-V-C** (Model-View-Controller) architecture.
