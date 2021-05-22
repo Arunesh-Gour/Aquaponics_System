@@ -1,4 +1,4 @@
-from ..IoTStubEssentials import (IoTDevice, Signal)
+from ..ProjectEssentials-Python import (IoTDevice, Signal)
 # Above line will generate error as IoTStubEssentials is in current
 # directory, not in parent. This it not changed to show how you need
 # to write in IoTStub devices / files.
