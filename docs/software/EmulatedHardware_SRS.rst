@@ -11,7 +11,7 @@ Software Requirement Specifications (SRS)
 Introduction
 ============
 Emulated hardware is a module containing several IoT device stubs ranging from
-sensors to controllers.
+sensors to actuators.
 
 Purpose
 -------
@@ -33,8 +33,8 @@ API format and other details.
 
 Scope
 -----
-Emulated hardware consists of 2 segments for IoTs - sensors and controllers.
-Sensors only provide reading of current state, while controllers provide both
+Emulated hardware consists of 2 segments for IoTs - sensors and actuators.
+Sensors only provide reading of current state, while actuators provide both
 reading and control write operations.
 
 Sensors
@@ -84,7 +84,7 @@ External interface requirements
    Hardware.
    Software.
    Communication.
-All controllers and sensors have just 2 public functions - read() and write().
+All actuators and sensors have just 2 public functions - read() and write().
 The variable to be read or written will be passed as string, while value to
 be overwritten will be passed as respective object.
 
