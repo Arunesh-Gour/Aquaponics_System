@@ -4,4 +4,5 @@ __pycache__/
 
 # Django files
 *.sqlite3
-migrations/*.py
+migrations/*
+!migrations/temp.rst
