@@ -65,10 +65,10 @@ Database
 
 Credits
 =======
-*  :File: ``src/AquaponicsSystem/EmulatedHardware/IoTStubEssentials/``
+*  :File: ``src/AquaponicsSystem/EmulatedHardware/ProjectEssentials/``
    :User: `CXINFINITE <https://github.com/CXINFINITE>`_.
-   :Repository: `IoTStubEssentials
-                <https://github.com/CXINFINITE/IoTStubEssentials>`_.
+   :Repository: `ProjectEssentials-Python
+                <https://github.com/CXINFINITE/ProjectEssentials-Python>`_.
 
 Licensing
 =========
