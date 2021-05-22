@@ -1,20 +1,21 @@
-from ..IoTStubEssentials import (IoTDevice, Signal)
+from ..ProjectEssentials import (IoTDevice, Signal)
 
-if ("WaterHeater" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
-   IoTDevice.IoTDevice.deviceTypes[0]["WaterHeater"] = [
+if ("WaterValve" not in (IoTDevice.IoTDevice.deviceTypes[0]).keys()):
+   IoTDevice.IoTDevice.deviceTypes[0]["WaterValve"] = [
       {
          # "attribute_name" : default_value_in_apt_format,
          "power" : False,
-         "_heatingRate" : 0.0,
+         "valve" : 0.0,
+         "maxFlow" : 0.0, # max flow rate / sec
       },
       0, # IoTDevice manages this automatically.
    ]
 
-class WaterHeater (IoTDevice.IoTDevice):
+class WaterValve (IoTDevice.IoTDevice):
    def __init__ (self, deviceName=None):
-      super().__init__(deviceType="WaterHeater", deviceName=deviceName)
+      super().__init__(deviceType="WaterValve", deviceName=deviceName)
       
-      Signal.Signal.register(self.serial, self.write(key="_?"))
+      Signal.Signal.register(self.serial, self.read(key="?"))
    
    def delete (self):
       Signal.Signal.unregister(self.serial)
@@ -35,26 +36,17 @@ class WaterHeater (IoTDevice.IoTDevice):
       
       # Returns a tuple of what values are readable.
       if (key == "?"):
-         return ("serial", "power", "_heatingRate")
+         return tuple(self.deviceAttributes.keys())
       
       if (key == "serial"):
          return self.serial
       
       # Basic check.
-      if (key not in self.write(key="_?")):
+      if (key not in self.deviceAttributes.keys()):
          raise NameError("unrecognized key '{0}'".format(key))
       
       # Main read method start here:
-      if (key == "power"):
-         # Explicitly checking so as not to pass mutable value.
-         if (self.deviceAttributes["power"] == True):
-            return True
-         else:
-            return False
-      if (key == "_heatingRate"):
-         return self.deviceAttributes["_heatingRate"]
-      else:
-         raise ValueError("non-readable key '{0}'".format(key))
+      return self.deviceAttributes[key]
    
    def write (self, key, value=None):
       if (type(key).__name__ == 'str'):
@@ -68,16 +60,8 @@ class WaterHeater (IoTDevice.IoTDevice):
       
       key = key.strip()
       
-      # Returns a tuple of what values are mutable.
-      if (key == "?"):
-         # Contains visible values.
-         return ("power",)
-      elif (key == "_?"):
-         # Contains hidden values as well.
-         return ("power", "_heatingRate",)
-      
       # Basic check.
-      if (key not in self.write(key="_?")):
+      if (key not in self.deviceAttributes.keys()):
          raise NameError("unrecognized key '{0}'".format(key))
       
       # Main write method start here:
@@ -91,19 +75,19 @@ class WaterHeater (IoTDevice.IoTDevice):
                Signal.Signal.signal(self.serial, "power")
          else:
             raise TypeError("power requires 'bool' only")
-      if (key == "_heatingRate"):
+      elif (key in list(self.deviceAttributes.keys())[1:]):
          if (type(value).__name__ == 'float'):
-            if (value > -5.0 and value < 5.0):
-               oldValue = self.deviceAttributes["_heatingRate"]
+            if (value >= 0.0 and value <= 100.0):
+               oldValue = self.deviceAttributes[key]
                
-               self.deviceAttributes["_heatingRate"] = value
+               self.deviceAttributes[key] = value
                
-               if (oldValue != self.deviceAttributes["_heatingRate"]):
-                  Signal.Signal.signal(self.serial, "_heatingRate")
+               if (oldValue != self.deviceAttributes[key]):
+                  Signal.Signal.signal(self.serial, key)
             else:
-               raise ValueError("invalid _heatingRate '{0}'".format(value))
+               raise ValueError("invalid {0} '{1}'".format(key, value))
          else:
-            raise TypeError("_heatingRate requires 'float' value")
+            raise TypeError("{0} requires 'float' value".format(key))
       else:
          raise ValueError("immutable key '{0}'".format(key))
 # Guard line below: Do NOT exceed 79 character limit per line in any case.
