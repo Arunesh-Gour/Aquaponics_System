@@ -1,0 +1,21 @@
+<html>
+   <head>
+      <title>Yo!</title>
+      {% load static %}
+      <!--<script src="" type="text/javascript"></script>-->
+      <link rel="stylesheet" href="{% static 'appname/file.css' %}">
+   </head>
+   <body>
+      <div id="mainArea">
+         {% if error != None %}<!--way to use python commands in html-->
+         <div id="some">{{ error }}</div><!--using variables-->
+         {% endif %}
+         <div id="other">
+            <ul>
+               <li><a href="{% url 'namespace:view' %}">Info</a></li>
+               <li><a href="{% url 'namespace:view' %}">Link</a></li>
+            </ul>
+         </div>
+      </div>
+   </body>
+</html>
