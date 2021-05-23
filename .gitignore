@@ -6,3 +6,6 @@ __pycache__/
 *.sqlite3
 migrations/*
 !migrations/temp.rst
+
+# DB files
+*.json
