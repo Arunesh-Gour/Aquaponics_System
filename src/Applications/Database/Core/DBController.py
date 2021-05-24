@@ -27,6 +27,17 @@ class DBController:
       }
       """
    
+   def load (self):
+      # Read variables from file.
+      with open(self.filename, "r") as filehandler:
+         # Read entire file as filehandler.read().
+         # Or read line by line as filehandler.readline().
+   
+   def save (self):
+      # Write variables to file.
+      with open(self.filename, "w") as filehandler:
+         # Write entire file as filehandler.write(string).
+   
    def read (self, key):
       if (type(key).__name__ == 'str'):
          if (key.strip() == '' or len(key.strip()) < 1):
@@ -44,9 +55,6 @@ class DBController:
       
       # Read value from file.
       # And return it in appropriate format.
-      with open(self.filename, "r") as filehandler:
-         # Read entire file as filehandler.read().
-         # Or read line by line as filehandler.readline().
    
    def write (self, key, value):
       if (type(key).__name__ == 'str'):
@@ -66,8 +74,5 @@ class DBController:
       # Write value to file.
       # Efficiently.
       # Check value type and raise appropriate error where needed.
-      # with open(self.filename, "w") as filehandler:
-      with open(self.filename, "a") as filehandler:
-         # Write entire file as filehandler.write(string).
 # Guard line below: Do NOT exceed 79 character limit per line in any case.
 # -----------------------------------------------------------------------------
