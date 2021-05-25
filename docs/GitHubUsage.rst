@@ -46,6 +46,11 @@ Pushing changes to remote
       and *branch*.
    * ``git push`` to push to currently set *remote* and *branch*.
 
+Updating local while preserving untracked
+=========================================
+1. ``git fetch origin`` to fetch changes from repository.
+2. ``git pull`` to merge changes, without affecting local modified files.
+
 Rebasing for merge conflict
 ===========================
 1. ``git fetch upstream`` to fetch updated file(s) from upstream.
