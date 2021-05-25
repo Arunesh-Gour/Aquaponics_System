@@ -8,4 +8,3 @@ migrations/*
 !migrations/temp.rst
 
 # DB files
-*.json
