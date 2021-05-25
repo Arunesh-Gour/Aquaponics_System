@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="Home.css">
+      <title>AquaMation</title>
+  </head>
+  <body>
+    <script href="Home.js"></script>
+    
+    <section class="showcase">
+        <header>
+          <h2 class="logo">AquaMation</h2>
+          <div class="toggle"></div>
+        </header>
+        <video src="Video.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+          <h3>Transforming</h3>
+          <h3>Agriculture</h3>
+          <p>Combining traditional Agriculture with Fish farming</p>
+          <a href="#">Explore</a>
+        </div>
+        <ul class="social">
+          <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+          <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+          <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+
+        <div class="form-popup" id="myForm">
+          <form action="Main.html" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" value="abcd@gmail.com" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+
+            <button type="submit" class="btn_1" onclick="verifyPassword()">Login</button>
+            <button type="submit" class="btn_2">Sign up</button>
+
+          </form>
+        </div>
+
+      </section>
+  </body>
+</html>
