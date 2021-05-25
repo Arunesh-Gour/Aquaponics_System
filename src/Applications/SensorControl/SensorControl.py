@@ -30,7 +30,7 @@ def updateJSON():
     with open(f'{FILE_PATH}/{FILE_NAME}.json', 'w') as f:
         json.dump(data, f)
 
-# Window confifuration
+# Window configuration
 window = Tk()
 window.geometry('512x200')
 window.title('Sensor System Contols')
