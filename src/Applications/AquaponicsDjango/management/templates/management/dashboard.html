@@ -1,0 +1,124 @@
+<html lang="en">
+   <head>
+      {% load static %}
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dashboard - Aquaponics</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'management/dashboard.css' %}">
+      <script type="text/javascript" src="{% static 'management/jquery-3.6.0.min.js' %}"></script>
+   </head>
+   <body>
+      <input type="hidden" id="fetchdataurl" value="{% url 'management:fetchdata' %}" />
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="#">AquaMation Systems Ltd.</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <select id="TankSelection" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" class="nav-link" aria-labelledby="navbarDropdown">
+                     {% for tank in tankList %}
+                        {% if forloop.counter0 == 0 %}
+                           <option class="dropdown-item" selected>{{ tank }}</option>
+                        {% else %}
+                           <option class="dropdown-item">{{ tank }}</option>
+                        {% endif %}
+                     {% endfor %}
+                     <!--<a class="dropdown-item">{{ tank }}</a>-->
+                  </select>
+               </li>
+            </ul>
+            <form class="form-inline">
+               <a href="{% url 'management:logout' %}">
+                  <button class="btn btn-outline-success" type="button">Logout</button>
+               </a>
+            </form>
+         </div>
+      </nav>
+      <div id="main-content">
+         <table id="table">
+            <thead>
+               <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Value</th>
+                  <th scope="col">Safe</th>
+                  <th scope="col">Danger</th>
+                  <th scope="col">Toxic</th>
+               </tr>
+            </thead>
+            
+            <tbody>   
+               <tr id="TANRow">
+                  <th scope="row">TAN (Total Ammonia Nitrogen)</th>
+                  <td id="TAN">0.8</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="TemperatureRow">
+                  <th scope="row" >Temperature</th>
+                  <td id="Temperature">26</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="pHRow">
+                  <th scope="row" >pH</th>
+                  <td id="pH">12</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="DORow">
+                  <th scope="row" >DO (Dissolved Oxygen)</th>
+                  <td id = "DO">7</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="NO2Row">
+                  <th scope="row" >NO2 (nitrite)</th>
+                  <td id="NO2">0.2</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="NO3Row">
+                  <th scope="row" >NO3 (nitrate)</th>
+                  <td id="NO3">4</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="WaterLevelRow">
+                  <th scope="row" >Water Level</th>
+                  <td id="Water-Level">75</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+               <tr id="UnionizedNH3Row">
+                  <th scope="row" >Unionized NH3</th>
+                  <td id="Unionized-NH3">0.4</td>
+                  <td class="safe"></td>
+                  <td class="danger"></td>
+                  <td class="toxic"></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <script src="{% static 'management/dashboard.js' %}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
+</html>

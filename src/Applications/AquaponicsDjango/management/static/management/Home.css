@@ -1,229 +1,228 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 *
 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
 }
 header
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 40px 100px;
+   z-index: 1000;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 header .logo
 {
-  font-size: 2rem;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
+   font-size: 2rem;
+   color: #fff;
+   text-transform: uppercase;
+   cursor: pointer;
 }
 
 .showcase
 {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  transition: 0.5s;
-  z-index: 2;
+   position: absolute;
+   right: 0;
+   width: 100%;
+   min-height: 100vh;
+   padding: 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #111;
+   transition: 0.5s;
+   z-index: 2;
 }
 .showcase.active
 {
-  right: 300px;
+   right: 300px;
 }
 
 .showcase video
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   opacity: 0.8;
 }
 .overlay
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #03a9f4;
-  mix-blend-mode: overlay;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #03a9f4;
+   mix-blend-mode: overlay;
 }
 .text
 {
-  position: relative;
-  z-index: 10;
+   position: relative;
+   z-index: 10;
 }
 
 .text h2
 {
-  font-size: 5em;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
+   font-size: 5em;
+   font-weight: 800;
+   color: #fff;
+   line-height: 1em;
+   text-transform: uppercase;
 }
 .text h3
 {
-  font-size: 4em;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
+   font-size: 4em;
+   font-weight: 700;
+   color: #fff;
+   line-height: 1em;
+   text-transform: uppercase;
 }
 .text p
 {
-  font-size: 1.1em;
-  color: #fff;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
+   font-size: 1.1em;
+   color: #fff;
+   margin: 20px 0;
+   font-weight: 400;
+   max-width: 700px;
 }
 .text a
 {
-  display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
+   display: inline-block;
+   font-size: 1em;
+   background: #fff;
+   padding: 10px 30px;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-weight: 500;
+   margin-top: 10px;
+   color: #111;
+   letter-spacing: 2px;
+   transition: 0.2s;
 }
 .text a:hover
 {
-  letter-spacing: 6px;
+   letter-spacing: 6px;
 }
 .social
 {
-  position: absolute;
-  z-index: 10;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   position: absolute;
+   z-index: 10;
+   bottom: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .social li
 {
-  list-style: none;
+   list-style: none;
 }
 .social li a
 {
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
+   display: inline-block;
+   margin-right: 20px;
+   filter: invert(1);
+   transform: scale(0.5);
+   transition: 0.5s;
 }
 .social li a:hover
 {
-  transform: scale(0.5) translateY(-15px);
+   transform: scale(0.5) translateY(-15px);
 }
 
 @media (max-width: 991px)
 {
-  .showcase,
-  .showcase header
-  {
-    padding: 40px;
-  }
-  .text h2
-  {
-    font-size: 3em;
-  }
-  .text h3
-  {
-    font-size: 2em;
-  }
+   .showcase,
+   .showcase header
+   {
+      padding: 40px;
+   }
+   .text h2
+   {
+      font-size: 3em;
+   }
+   .text h3
+   {
+      font-size: 2em;
+   }
 }
-
 
 /* The popup form - hidden by default */
 .form-popup {
-  display: flex;
-  color: rgba(255, 255, 255, 0.685);
-  position: top;
-  transform: translate(25%, -60%);
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  border-radius: 10px;
-  z-index: 9;
-  
+   display: flex;
+   color: rgba(255, 255, 255, 0.685);
+   position: relative;
+   top: 0;
+   transform: translate(25%, -25%);
+   bottom: 0;
+   right: 15px;
+   border: 3px solid #f1f1f1;
+   border-radius: 10px;
+   z-index: 9;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: rgba(53, 52, 52, 0.712);
+   max-width: 300px;
+   padding: 10px;
+   background-color: rgba(53, 52, 52, 0.712);
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   border: none;
+   background: #f1f1f1;
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+   background-color: #ddd;
+   outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn_1 {
-  background-color: #04AA6D;
-  font-size: 1.2rem;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+   background-color: #04AA6D;
+   font-size: 1.2rem;
+   color: white;
+   padding: 16px 20px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   margin-bottom:10px;
+   opacity: 0.8;
 }
 
 .form-container .btn_2 {
-  background-color: #f14a2d;
-  font-size: 1.2rem;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+   background-color: #f14a2d;
+   font-size: 1.2rem;
+   color: white;
+   padding: 16px 20px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   margin-bottom:10px;
+   opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+   background-color: red;
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+   opacity: 1;
 }

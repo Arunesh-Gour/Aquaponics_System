@@ -1,0 +1,73 @@
+body{
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+   background-image: linear-gradient(
+      -100deg, rgb(80, 0, 40), rgb(0, 100, 200) 90%
+   );
+}
+
+#main-content {
+   width: 60%;
+   /*height: 615px;*/
+   height: 60%;
+   background:rgba(0,0,0,0.5);
+   margin: 0 auto;
+   top: 55%;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   border: 2px solid rgba(139, 139, 139, 0.281);
+   border-radius: 6px 6px 0 0;
+   box-shadow: 0 20px 30px rgba(0,0,0,0.6);
+}
+
+#TankSelection {
+   background-color: rgba(0, 0, 0, 0);
+   border: hidden;
+   height: 100%;
+}
+
+table {
+   font-family: sans-serif;
+   height: 100%;
+   width: 100%;
+}
+#table>tbody>tr>td, 
+#table>tbody>tr>th, 
+#table>tfoot>tr>td, 
+#table>tfoot>tr>th, 
+#table>thead>tr>td, 
+#table>thead>tr>th {
+   text-align: center;
+   padding: 0.5rem 2.5rem;
+   font-size: 0.8rem;
+}
+
+#table > thead > tr > th:first-child {
+   background-color:unset;
+}
+
+#table > thead > tr > th {
+   border-radius: 2px 7px 0 0; 
+}
+
+#table > tbody > tr > th { 
+   border-radius: 7px 0 0px 7px;
+}
+
+#table > thead > tr > th, #table > tbody > tr > th  {
+   background-color:#9BD727;
+   color:white; 
+}
+
+#table > tbody > tr > td {
+   border-radius: 7px;
+   color:rgb(255, 255, 255);
+}
+
+#table>tfoot>tr>td {
+   color: #9BD727;
+   font-size:1rem;
+}
