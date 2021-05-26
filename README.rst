@@ -46,11 +46,11 @@ Running dev version
 7. Remember above username and password.
 8. $ ``python3 manage.py makemigrations``.
 9. $ ``python3 manage.py migrate``.
-10.$ ``python3 manage.py runserver``.
-11.Open another terminal and ``cd`` to ``src/AquaponicsSystem/``.
-12.$ ``python3 main.py``.
-13.System is up and running.
-14.Ctrl-C in both terminals to quit.
+10. $ ``python3 manage.py runserver``.
+11. Open another terminal and ``cd`` to ``src/AquaponicsSystem/``.
+12. $ ``python3 main.py``.
+13. System is up and running.
+14. Ctrl-C in both terminals to quit.
 
 Building
 --------
