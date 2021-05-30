@@ -5,22 +5,34 @@ README
 Aquaponics_System
 *****************
 .. Brief description of project, what it is used for.
+AI based aquaponics automation system.
 
 Installing / Getting started
 ============================
 .. Introduction of minimal setup.
    Command, followed by explanation in next paragraph or after every command.
 
+:Supported on: *  Ununtu 20.04.
+               *  Windows 10.
+
+
+*  Current version does not support installation.
+*  Setup dev environment and get started.
+
 Developing
 ==========
 Built with
 ----------
 .. List of main libraries, frameworks used including versions.
+*  Python==3.x
+*  Django==3.2
+*  Python3-tkinter
 
 Prerequisites
 -------------
 .. What is needed to set up dev environment.
    For instances, dependencies or tools include download links.
+For other requirements, see ``requirements.txt``.
 
 Setting up dev
 --------------
@@ -56,11 +68,14 @@ Building
 --------
 .. How to build the project after working on it.
    Commands and explanation.
+No build instructions.
+Simply setup and run.
 
 Deploying / Publishing
 ----------------------
 .. How to build and release a new version?
    Commands and explanation.
+Publishing not supported yet.
 
 Versioning
 ==========
@@ -70,24 +85,31 @@ Versioning
 Configuration
 =============
 .. Configurations a user can enter when using the project.
+*  Use editor config provided under ``config/``.
+*  Remember username and password setup during dev setup.
 
 Tests
 =====
 .. Describe and show how to run tests with examples. Also, explain them with
    reasons.
+Not available.
 
 Style guide
 ===========
 .. Coding style and how to check it.
+Follows ``PEP 8`` guidelines.
 
 API Reference
 =============
 .. Links to API documentation, description, explanation.
+Core API is provided under discussion section with name ``Core``.
 
 Database
 ========
 .. Database versions and usages with download links.
    Also include DB Schema, relations, etc.
+*  Sqlite3 for web app user data management (Django built-in).
+*  JSON for sensor reading storage (custom).
 
 Credits
 =======
@@ -96,6 +118,17 @@ Credits
    :Repository: `ProjectEssentials-Python
                 <https://github.com/CXINFINITE/ProjectEssentials-Python>`_.
 
+Collaborators
+=============
+*  @Arunesh-Gour
+*  @gauravc6
+*  @kartik-kumar71
+*  @Prakhar-623
+*  @recker624
+*  @sanskar-singh-rajput
+*  @Vikram-BM
+
 Licensing
 =========
 .. State license and link to text version.
+See ``LICENSE``.
